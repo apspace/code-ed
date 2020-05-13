@@ -1,11 +1,11 @@
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 14pt;
+	font-family:  Arial, Helvetica, sans-serif;
+	font-size: 16px;
 	padding: 0;
-	margin: 10	10;
+	margin: 20px 20px;
 }
 h1 {
-	font-weight: 300;
+	font-weight: bold;
 	margin: 0px 0px 5px 0px;
 	font-size: 1em;
 }
@@ -24,13 +24,56 @@ ul {
 	padding: 0;
 	color:green;
 }
+header{
+	display: flex;
+}
+header h1{
+	flex:1;
+}
 
 footer{
 	font-size: 0.6em;
 	position: absolute;
-	bottom: 10px;
+	bottom: 20px;
 }
 
 .back{
 	margin: 0px 0px 5px 0px;
 }
+
+
+/* The slider itself */
+.slider {
+	margin: 10px 0;
+	-webkit-appearance: none;  /* Override default CSS styles */
+	appearance: none;
+	width: 100%; /* Full-width */
+	height: 30px; /* Specified height */
+	background:rgba(0, 0, 0, 0.2); /* Grey background */
+	outline: none; /* Remove outline */
+	opacity: 0.9; /* Set transparency (for mouse-over effects on hover) */
+	-webkit-transition: .1s; /* 0.2 seconds transition on hover */
+	transition: opacity .1s;
+ }
+ 
+ /* Mouse-over effects */
+ .slider:hover {
+	opacity: 1; /* Fully shown on mouse-over */
+ }
+ 
+ /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */ 
+ .slider::-webkit-slider-thumb {
+	-webkit-appearance: none; /* Override default look */
+	appearance: none;
+	width: 20px; /* Set a specific slider handle width */
+	height: 30px; /* Slider handle height */
+	background: white; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+ }
+ 
+ .slider::-moz-range-thumb {
+	width: 20px; /* Set a specific slider handle width */
+	height: 30px; /* Slider handle height */
+	background: white; /* Green background */
+	cursor: pointer; /* Cursor on hover */
+ }

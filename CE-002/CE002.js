@@ -9,6 +9,7 @@ function setup() {
 	img = createImage(windowWidth, windowHeight);
 	slider = createSlider(0, 100, 30);
 	slider.style('width', '210px');
+	slider.class('slider');
 	slider.changed(update);
 	k = PI / 180;
 	background(120);
