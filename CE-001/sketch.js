@@ -1,37 +1,18 @@
-let button, change;
-let para = [];
-let h;
+let r;
+let canvas;
+
 function setup() {
-	noCanvas();
-	button = createButton("Click");
-	change = createSlider(1, 36, 24);
-	change.input(changeSize);
-	button.mousePressed(createPara);
-	background(0);
-	h = select('h1');
-	// h.html('1234');
+	canvas = createCanvas(windowWidth, windowHeight);
+	canvas.position(0, 0);
+	canvas.style('z-index', '-1');
+	r = windowWidth / 10;
+
+	stroke(255);
+	fill(0);
 }
-
-
-function createPara() {
-	let p = createP('Number ' + random(0, 10));
-	p.class('new');
+function draw() {
 
 }
-
-function changeSize() {
-	para = selectAll('.new');
-	// // createP(para);
-	// let x = createP(para.length + 'size');
-	// x.style('font-size', change.value() + 'pt');
-
-	for (let i = 0; i < para.length; i++) {
-		para[i].style('font-size', change.value() + 'pt')
-	}
+function mouseDragged() {
+	ellipse(mouseX, mouseY, r, r);
 }
-// function draw() {
-// 	fill(255);
-// 	noStroke();
-// 	ellipse(mouseX, mouseY, 30, 30);
-
-// }
